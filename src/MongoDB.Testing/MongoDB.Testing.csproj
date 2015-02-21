@@ -30,17 +30,33 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\..\packages\mongocsharpdriver.1.10.0\lib\net35\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\..\packages\mongocsharpdriver.1.10.0\lib\net35\MongoDB.Driver.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DefaultFileSystem.cs" />
+    <Compile Include="DefaultProcessStarter.cs" />
+    <Compile Include="IFileSystem.cs" />
+    <Compile Include="IProcess.cs" />
+    <Compile Include="IProcessStarter.cs" />
+    <Compile Include="MongodExeOptions.cs" />
+    <Compile Include="Mongo\IMongoExeLocator.cs" />
+    <Compile Include="Mongo\MongodExeNotFoundException.cs" />
+    <Compile Include="Mongo\DefaultMongoExeLocator.cs" />
+    <Compile Include="Mongo\MongodExeFacade.cs" />
+    <Compile Include="Mongo\MongoTestServer.cs" />
+    <Compile Include="ProcessExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
