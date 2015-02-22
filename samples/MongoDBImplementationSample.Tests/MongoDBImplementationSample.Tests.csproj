@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="MongodExeLocator.cs" />
     <Compile Include="MyCounterServiceTests.cs" />
+    <Compile Include="MyCounterServiceWithSetupTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestBase.cs" />
   </ItemGroup>
