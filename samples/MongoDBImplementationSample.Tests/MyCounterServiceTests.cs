@@ -56,11 +56,49 @@ namespace MongoDBImplementationSample.Tests
         [Test]
         public void HasEnoughRating_Should_Return_False_When_The_User_Has_Less_Then_100_Rating()
         {
+            using (MongoTestServer server = StartServer())
+            {
+                // ARRANGE
+                var collection = server.Database.GetCollection<UserEntity>("users");
+                var service = new MyCounterService(collection);
+                var userId = ObjectId.GenerateNewId().ToString();
+                collection.Insert(new UserEntity
+                {
+                    Id = userId,
+                    Name = "foo",
+                    Rating = 90
+                });
+
+                // ACT
+                bool isEnough = service.HasEnoughRating(userId);
+
+                // ASSERT
+                Assert.False(isEnough);
+            }
         }
 
         [Test]
         public void HasEnoughRating_Should_Return_False_When_The_User_Has_100_Rating()
         {
+            using (MongoTestServer server = StartServer())
+            {
+                // ARRANGE
+                var collection = server.Database.GetCollection<UserEntity>("users");
+                var service = new MyCounterService(collection);
+                var userId = ObjectId.GenerateNewId().ToString();
+                collection.Insert(new UserEntity
+                {
+                    Id = userId,
+                    Name = "foo",
+                    Rating = 100
+                });
+
+                // ACT
+                bool isEnough = service.HasEnoughRating(userId);
+
+                // ASSERT
+                Assert.False(isEnough);
+            }
         }
     }
 }
