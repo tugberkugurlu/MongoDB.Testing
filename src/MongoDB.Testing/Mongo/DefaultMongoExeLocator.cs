@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace MongoDB.Testing.Mongo
 {
-    public class DefaultMongoExeLocator : IMongoExeLocator
+    internal class DefaultMongoExeLocator : IMongoExeLocator
     {
         private const string MongodExeName = "mongod.exe";
         private static readonly string[] PossiblePaths = new[]

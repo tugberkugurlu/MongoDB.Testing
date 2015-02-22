@@ -4,14 +4,16 @@ namespace MongoDBImplementationSample.Tests
 {
     public abstract class TestBase
     {
+        private const int Port = 27017;
+
         protected MongoTestServer StartServer()
         {
-            return MongoTestServer.Start(27017, new MongodExeLocator());
+            return MongoTestServer.Start(Port, new MongodExeLocator());
         }
 
-        protected IRandomMongoDatabase GetDatabase()
+        protected MongoTestServer SetupServer()
         {
-            return new DefaultRandomMongoDatabase(27017);
+            return MongoTestServer.Setup(Port);
         }
     }
 }

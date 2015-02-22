@@ -1,15 +1,17 @@
 ﻿using System;
+using System.Threading;
 using MongoDB.Bson;
-using Xunit;
+using MongoDB.Testing.Mongo;
+using NUnit.Framework;
 
 namespace MongoDBImplementationSample.Tests
 {
     public class MyCounterServiceTests : TestBase
     {
-        [Fact]
+        [Test]
         public void HasEnoughRating_Should_Throw_InvalidOperationException_When_The_User_Is_Not_Found()
         {
-            using (var server = StartServer())
+            using (MongoTestServer server = StartServer())
             {
                 // ARRANGE
                 var collection = server.Database.GetCollection<UserEntity>("users");
@@ -27,10 +29,10 @@ namespace MongoDBImplementationSample.Tests
             }
         }
 
-        [Fact]
+        [Test]
         public void HasEnoughRating_Should_Return_True_When_The_User_Has_More_Then_100_Rating()
         {
-            using (var server = StartServer())
+            using (MongoTestServer server = StartServer())
             {
                 // ARRANGE
                 var collection = server.Database.GetCollection<UserEntity>("users");
@@ -51,12 +53,12 @@ namespace MongoDBImplementationSample.Tests
             }
         }
 
-        [Fact]
+        [Test]
         public void HasEnoughRating_Should_Return_False_When_The_User_Has_Less_Then_100_Rating()
         {
         }
 
-        [Fact]
+        [Test]
         public void HasEnoughRating_Should_Return_False_When_The_User_Has_100_Rating()
         {
         }

@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 namespace MongoDB.Testing
 {
-    public class DefaultProcessStarter : IProcessStarter
+    internal class DefaultProcessStarter : IProcessStarter
     {
         public IProcess Start(ProcessStartInfo processStartInfo)
         {

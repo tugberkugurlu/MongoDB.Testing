@@ -3,7 +3,7 @@ using System.IO;
 
 namespace MongoDB.Testing
 {
-    public class DefaultFileSystem : IFileSystem
+    internal class DefaultFileSystem : IFileSystem
     {
         /// <summary>
         /// Creates a temp folder under the current user's temporary folder and returns it's path.

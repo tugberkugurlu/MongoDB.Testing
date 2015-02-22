@@ -3,7 +3,7 @@ using MongoDB.Driver;
 
 namespace MongoDB.Testing.Mongo
 {
-    public class DefaultRandomMongoDatabase : IRandomMongoDatabase
+    internal class DefaultRandomMongoDatabase : IRandomMongoDatabase
     {
         private readonly MongoDatabase _database;
         private readonly MongoServer _server;

@@ -1,6 +1,6 @@
 namespace MongoDB.Testing
 {
-    public interface IFileSystem
+    internal interface IFileSystem
     {
         string CreateTempFolder();
         bool FileExists(string path);

@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 namespace MongoDB.Testing.Mongo
 {
-    public class MongodExeFacade
+    internal class MongodExeFacade
     {
         private readonly IMongoExeLocator _exeLocator;
         private readonly IProcessStarter _processStarter;
