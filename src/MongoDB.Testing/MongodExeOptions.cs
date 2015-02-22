@@ -18,7 +18,7 @@ namespace MongoDB.Testing
         {
             if (port == 0)
             {
-                throw new ArgumentOutOfRangeException("port", _port, "The port number cannot be '0'.");
+                throw new ArgumentOutOfRangeException("port", port, "The port number cannot be '0'.");
             }
 
             _port = port;
