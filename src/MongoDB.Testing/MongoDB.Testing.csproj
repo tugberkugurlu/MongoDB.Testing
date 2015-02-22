@@ -11,6 +11,7 @@
     <AssemblyName>MongoDB.Testing</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>733871b2</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,7 +48,9 @@
     <Compile Include="IProcess.cs" />
     <Compile Include="IProcessStarter.cs" />
     <Compile Include="MongodExeOptions.cs" />
+    <Compile Include="Mongo\DefaultRandomMongoDatabase.cs" />
     <Compile Include="Mongo\IMongoExeLocator.cs" />
+    <Compile Include="Mongo\IRandomMongoDatabase.cs" />
     <Compile Include="Mongo\MongodExeNotFoundException.cs" />
     <Compile Include="Mongo\DefaultMongoExeLocator.cs" />
     <Compile Include="Mongo\MongodExeFacade.cs" />

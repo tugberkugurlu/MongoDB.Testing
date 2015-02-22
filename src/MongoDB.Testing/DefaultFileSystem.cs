@@ -37,5 +37,10 @@ namespace MongoDB.Testing
 
             return Directory.Exists(path);
         }
+
+        public void DeleteDirectory(string path, bool recursive)
+        {
+            Directory.Delete(path, recursive);
+        }
     }
 }

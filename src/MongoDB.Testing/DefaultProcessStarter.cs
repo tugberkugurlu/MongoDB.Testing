@@ -1,6 +1,5 @@
 using System;
 using System.Diagnostics;
-using MongoDB.Testing.Mongo;
 
 namespace MongoDB.Testing
 {

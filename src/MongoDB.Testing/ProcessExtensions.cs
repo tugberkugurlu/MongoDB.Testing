@@ -32,6 +32,11 @@ namespace MongoDB.Testing
             {
                 _process.Kill();
             }
+
+            public void WaitForExit()
+            {
+                _process.WaitForExit();
+            }
         }
     }
 }

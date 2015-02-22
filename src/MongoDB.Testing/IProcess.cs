@@ -7,5 +7,6 @@ namespace MongoDB.Testing
         int Id { get; }
         ProcessStartInfo StartInfo { get; }
         void Kill();
+        void WaitForExit();
     }
 }
