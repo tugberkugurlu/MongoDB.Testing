@@ -6,7 +6,7 @@ namespace MongoDBImplementationSample.Tests
     {
         public string Locate()
         {
-            return @"c:\mongo\bin\mongod.exe";
+            return @"C:\Program Files\MongoDB\Server\3.0\bin\mongod.exe";
         }
     }
 }

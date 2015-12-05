@@ -5,6 +5,6 @@ namespace MongoDB.Testing.Mongo
 {
     public interface IRandomMongoDatabase : IDisposable
     {
-        MongoDatabase Database { get; }
+        IMongoDatabase Database { get; }
     }
 }

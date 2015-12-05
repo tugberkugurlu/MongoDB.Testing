@@ -33,17 +33,17 @@ namespace MongoDB.Testing.Mongo
         {
             if (process == null)
             {
-                throw new ArgumentNullException("process");
+                throw new ArgumentNullException(nameof(process));
             }
 
             if (fileSystem == null)
             {
-                throw new ArgumentNullException("fileSystem");
+                throw new ArgumentNullException(nameof(fileSystem));
             }
 
             if (dataPath == null)
             {
-                throw new ArgumentNullException("dataPath");
+                throw new ArgumentNullException(nameof(dataPath));
             }
 
             _process = process;
@@ -53,10 +53,7 @@ namespace MongoDB.Testing.Mongo
             _mode = MongoTestServerMode.WithOwnedProcess;
         }
 
-        public MongoDatabase Database
-        {
-            get { return _randomDatabase.Database; }
-        }
+        public IMongoDatabase Database => _randomDatabase.Database;
 
         /// <summary>
         /// Terminates the created mongod.exe instance and deletes the created temp folder if the instance is 
@@ -113,17 +110,17 @@ namespace MongoDB.Testing.Mongo
         {
             if (mongoExeLocator == null)
             {
-                throw new ArgumentNullException("mongoExeLocator");
+                throw new ArgumentNullException(nameof(mongoExeLocator));
             }
 
             if (processStarter == null)
             {
-                throw new ArgumentNullException("processStarter");
+                throw new ArgumentNullException(nameof(processStarter));
             }
 
             if (fileSystem == null)
             {
-                throw new ArgumentNullException("fileSystem");
+                throw new ArgumentNullException(nameof(fileSystem));
             }
 
             var exeFacade = new MongodExeFacade(mongoExeLocator, processStarter);
