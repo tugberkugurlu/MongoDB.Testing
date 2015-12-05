@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: InternalsVisibleTo("MongoDB.Testing.Tests")]
 [assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Tugberk Ugurlu")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
