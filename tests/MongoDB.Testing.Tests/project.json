@@ -1,0 +1,25 @@
+{
+    "version": "0.0.0",
+    "testRunner": "xunit",
+    "dependencies": {
+        "dotnet-test-xunit": "2.2.0-preview2-build1029",
+        "xunit": "2.2.0-beta3-build3402",
+        "MongoDB.Testing": "*",
+        "Moq": "4.6.38-alpha"
+    },
+    "frameworks": {
+        "netcoreapp1.0": {
+            "imports": [
+                "dnxcore50",
+                "portable-net451+win8"
+            ],
+            "dependencies": {
+                "Microsoft.NETCore.App": {
+                    "version": "1.0.0",
+                    "type": "platform"
+                }
+            }
+        },
+        "net451": {}
+    }
+}

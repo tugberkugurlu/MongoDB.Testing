@@ -1,0 +1,27 @@
+{
+    "version": "0.0.0",
+    "description": "MongoDB integration testing helper from .NET projects",
+    "authors": ["Tugberk Ugurlu"],
+    "packOptions": {
+        "licenseUrl": "https://raw.github.com/tugberkugurlu/MongoDB.Testing/master/LICENSE",
+        "repository": {
+            "type": "git",
+            "url": "git://github.com/tugberkugurlu/MongoDB.Testing"
+        },
+        "tags": [
+            "MongoDB", "Mongo", "NoSQL", "Testing", "IntegrationTesting"
+        ]
+    },
+    "dependencies": {
+        "MongoDB.Driver": "2.3.0"
+    },
+    "frameworks": {
+        "net451": {},
+        "netstandard1.6": {
+            "imports": ["dnxcore50", "portable-net45+win8"],
+            "dependencies": {
+                "System.Reflection": "4.1.0"
+            }
+        }
+    }
+}

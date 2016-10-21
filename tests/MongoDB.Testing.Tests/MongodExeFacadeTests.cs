@@ -1,13 +1,13 @@
 ﻿using System.Diagnostics;
 using MongoDB.Testing.Mongo;
 using Moq;
-using NUnit.Framework;
+using Xunit;
 
 namespace MongoDB.Testing.Tests
 {
     public class MongodExeFacadeTests
     {
-        [Test]
+        [Fact]
         public void Start_Should_Return_The_Return_Value_Of_ProcessStarter_Start()
         {
             // ARRANGE
@@ -31,7 +31,7 @@ namespace MongoDB.Testing.Tests
             Assert.True(ReferenceEquals(process, processMock.Object));
         }
 
-        [Test]
+        [Fact]
         public void Start_Should_Call_ProcessStarter_With_Correct_Parameters()
         {
             // ARRANGE
@@ -56,8 +56,8 @@ namespace MongoDB.Testing.Tests
 
             // ASSERT
             processStarterMock.Verify(starter => starter.Start(It.IsAny<ProcessStartInfo>()), Times.Once());
-            Assert.AreEqual(options.ToString(), process.StartInfo.Arguments);
-            Assert.AreEqual(location, process.StartInfo.FileName);
+            Assert.Equal(options.ToString(), process.StartInfo.Arguments);
+            Assert.Equal(location, process.StartInfo.FileName);
         }
     }
 }
