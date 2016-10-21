@@ -1,6 +1,7 @@
 ## MongoDB.Testing
 
-MongoDB integration testing helper from .NET projects that stands up a server and a random database on the fly.
+MongoDB integration testing helper from .NET projects that stands up a server and a random database on the fly. 
+The library is compatible with .NET 4.5.1 and [.NET Standard](https://docs.microsoft.com/en-us/dotnet/articles/standard/library) 1.6.
 
 ## Quick Start
 
