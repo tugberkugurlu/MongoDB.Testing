@@ -35,7 +35,7 @@ nuGetVersion="3.2.0"
 nuGetUrl="https://dist.nuget.org/win-x86-commandline/v$nuGetVersion/nuget.exe"
 nugetExeDirPath=${rootDir%%/}/.nuget
 nugetExePath=${nugetExeDirPath%%/}/nuget.exe
-nugetPackagePath=$(find ./artifacts/ -regextype posix-extended -regex ".*MongoDB.$VERSION.nupkg")
+nugetPackagePath=$(find ./artifacts/ -regextype posix-extended -regex ".*Testing.$VERSION.nupkg")
 
 if [ ! -f "$nugetExePath" ]
 then
