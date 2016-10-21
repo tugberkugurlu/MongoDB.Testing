@@ -11,7 +11,7 @@ Install the library into your testing project through NuGet:
 Install-Package MongoDB.Testing -pre
 ```
 
-Write a `mongod.exe` locator:
+Write a `mongod` executable locator like below one for example (which is specific to Windows):
 
 ```csharp
 public class MongodExeLocator : IMongoExeLocator
